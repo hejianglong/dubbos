@@ -12,6 +12,8 @@
     <properties>
         <org.springframework.version>4.3.10.RELEASE</org.springframework.version>
         <org.apache.dubbo.version>2.7.0</org.apache.dubbo.version>
+        <org.apache.curator.version>4.1.0</org.apache.curator.version>
+        <org.apache.curator>2.8.0</org.apache.curator>
     </properties>
     <modules>
         <module>provider</module>
@@ -19,4 +21,17 @@
         <module>api</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
