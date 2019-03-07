@@ -11,5 +11,24 @@
 
     <artifactId>provider</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.dubbos</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${org.apache.dubbo.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
