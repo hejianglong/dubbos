@@ -1,5 +1,5 @@
 package com.dubbos.api;
 
-public interface DemoService {
+public interface AnnotationService {
     String sayHello(String name);
 }

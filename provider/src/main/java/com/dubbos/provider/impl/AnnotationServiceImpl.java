@@ -11,9 +11,9 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license.
  */
-package com.dubbos.provider;
+package com.dubbos.provider.impl;
 
-import com.dubbos.api.DemoService;
+import com.dubbos.api.AnnotationService;
 import org.apache.dubbo.config.annotation.Service;
 
 /**
@@ -23,7 +23,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @Desc
  */
 @Service
-public class AnnotationServiceImpl implements DemoService {
+public class AnnotationServiceImpl implements AnnotationService {
 
     @Override
     public String sayHello(String name) {
