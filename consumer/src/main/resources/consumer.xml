@@ -6,5 +6,9 @@
 
     <dubbo:application name="demo-consumer" />
     <dubbo:registry group="aaa" address="zookeeper://192.168.30.112:2181" />
-    <dubbo:reference id="demoService" check="false" interface="com.dubbos.api.DemoService" />
+    <bean id="demoCallback" class="com.dubbos.consumer.NotifyImpl" />
+
+    <dubbo:reference id="demoService" check="false" interface="com.dubbos.api.DemoService">
+        <dubbo:method name="sayHello" onreturn="demoCallback.onReturn" onthrow="demoCallback.onThrow" />
+    </dubbo:reference>
 </beans>

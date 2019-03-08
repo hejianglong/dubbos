@@ -7,11 +7,12 @@ import java.io.IOException;
 
 public class Consumer {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:consumer.xml");
         applicationContext.start();
         DemoService demoService = (DemoService) applicationContext.getBean("demoService");
-        String hello = demoService.sayHello("along");
+        String hello = demoService.sayHello("long");
+        // String hello = demoService.sayHello("throw");
         System.out.println(hello);
     }
 }
